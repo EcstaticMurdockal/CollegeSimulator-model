@@ -218,6 +218,7 @@ class AdmissionResult(BaseModel):
     advice: List[str]
     fit_analysis: Dict[str, str]
     application_round_impact: Dict[str, Any]
+    ml_info: Dict[str, Any]
 
 # ============================================================================
 # EVALUATOR (Import from evaluator)

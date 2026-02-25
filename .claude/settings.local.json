@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(curl:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(dir:*)",
+      "Bash(timeout 5 type \"C:\\\\Users\\\\汤\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users---Desktop-CollegeSimulator\\\\tasks\\\\b3a626d.output\")"
     ]
   }
 }

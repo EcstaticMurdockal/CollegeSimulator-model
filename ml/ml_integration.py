@@ -139,13 +139,17 @@ class HybridAdmissionsPredictor:
         ml_probability = self.get_ml_prediction(applicant)
 
         if ml_probability is not None:
+            # Convert numpy types to Python native types
+            ml_prob_float = float(ml_probability)
+            rule_prob_float = float(rule_based_probability)
+
             # Hybrid approach: weighted average
-            final_probability = 0.7 * ml_probability + 0.3 * rule_based_probability
+            final_probability = 0.7 * ml_prob_float + 0.3 * rule_prob_float
 
             return {
-                'probability': final_probability,
-                'ml_probability': ml_probability,
-                'rule_based_probability': rule_based_probability,
+                'probability': float(final_probability),
+                'ml_probability': float(ml_prob_float),
+                'rule_based_probability': float(rule_prob_float),
                 'method': 'hybrid',
                 'ml_weight': 0.7,
                 'rule_weight': 0.3
@@ -153,9 +157,9 @@ class HybridAdmissionsPredictor:
         else:
             # Fallback to rule-based only
             return {
-                'probability': rule_based_probability,
+                'probability': float(rule_based_probability),
                 'ml_probability': None,
-                'rule_based_probability': rule_based_probability,
+                'rule_based_probability': float(rule_based_probability),
                 'method': 'rule_based_only',
                 'ml_weight': 0.0,
                 'rule_weight': 1.0

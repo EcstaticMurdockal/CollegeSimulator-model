@@ -80,6 +80,24 @@ function ResultsDisplay({ result, onReset }) {
         </div>
       </div>
 
+      {result.ml_info && (
+        <div className="results-section">
+          <h3>ML Prediction Details</h3>
+          <div style={{ background: '#f0f8ff', padding: '15px', borderRadius: '8px', borderLeft: '4px solid #2196F3' }}>
+            <p><strong>Method:</strong> {result.ml_info.method === 'hybrid' ? 'Hybrid (ML + Rule-based)' : 'Rule-based Only'}</p>
+            {result.ml_info.ml_available && (
+              <>
+                <p><strong>ML Probability:</strong> {(result.ml_info.ml_probability * 100).toFixed(1)}%</p>
+                <p><strong>Rule-based Probability:</strong> {(result.ml_info.rule_based_probability * 100).toFixed(1)}%</p>
+              </>
+            )}
+            <p style={{ fontSize: '0.9rem', color: '#666', marginTop: '10px' }}>
+              {result.ml_info.note}
+            </p>
+          </div>
+        </div>
+      )}
+
       <div className="reset-section">
         <button className="btn btn-primary" onClick={onReset}>
           Evaluate Another Application

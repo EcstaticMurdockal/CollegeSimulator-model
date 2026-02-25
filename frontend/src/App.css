@@ -20,6 +20,14 @@
 .App-header p {
   color: #666;
   font-size: 1.1rem;
+  margin: 0.25rem 0;
+}
+
+.App-header .subtitle {
+  color: #4CAF50;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
 }
 
 .App-main {
