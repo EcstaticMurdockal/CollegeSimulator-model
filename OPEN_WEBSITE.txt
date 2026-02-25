@@ -1,0 +1,40 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║     COLLEGE ADMISSIONS SIMULATOR - READY TO USE!                    ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+✅ BACKEND API:  http://localhost:8001
+✅ WEBSITE:      http://localhost:3000
+
+═══════════════════════════════════════════════════════════════════════
+
+HOW TO OPEN THE WEBSITE:
+
+1. Open your web browser (Chrome, Firefox, Edge, Safari)
+
+2. Go to:  http://localhost:3000
+
+3. You should see the College Admissions Simulator form!
+
+═══════════════════════════════════════════════════════════════════════
+
+WHAT'S AVAILABLE:
+
+✓ 53 Universities (Top 50+)
+✓ 11 Gender Options
+✓ 38 AP Subjects
+✓ Application Rounds (ED/EA/REA/RD)
+✓ 26 Countries
+✓ 52 US States
+
+═══════════════════════════════════════════════════════════════════════
+
+BOTH SERVERS ARE RUNNING:
+
+Backend:  http://localhost:8001  (API)
+Frontend: http://localhost:3000  (Website)
+
+Just open http://localhost:3000 in your browser!
+
+═══════════════════════════════════════════════════════════════════════
